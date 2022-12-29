@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:ramosa_apps/main.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:developer';
-// import 'package:google_sign_in/google_sign_in.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:http/http.dart' as http;
 
-// GoogleSignIn _googleSignIn = GoogleSignIn(
-//   scopes: [
-//     'email',
-//     'https://www.googleapis.com/auth/contacts.readonly',
-//   ],
-// );
+GoogleSignIn _googleSignIn = GoogleSignIn(
+  scopes: [
+    'email',
+    'https://www.googleapis.com/auth/contacts.readonly',
+  ],
+);
 
 class LogIn extends StatefulWidget {
   const LogIn({super.key});
@@ -62,13 +63,13 @@ class SizeConfig {
   }
 }
 
-// Future<void> _handleSignIn() async {
-//   try {
-//     await _googleSignIn.signIn();
-//   } catch (error) {
-//     print(error);
-//   }
-// }
+Future<void> _handleSignIn() async {
+  try {
+    await _googleSignIn.signIn();
+  } catch (error) {
+    print(error);
+  }
+}
 
 Scaffold body(BuildContext context) {
   int vertSize = 17;
@@ -145,7 +146,7 @@ Scaffold body(BuildContext context) {
               foregroundColor: Colors.white,
             ),
             onPressed: () {
-              // _handleSignIn();
+              _handleSignIn();
               // Navigator.push(
               //     context, MaterialPageRoute(builder: (_) => Ramosa()));
             },
