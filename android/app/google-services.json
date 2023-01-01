@@ -29,6 +29,13 @@
             {
               "client_id": "550561692793-ode7l4b01457j1ulst5mli0meqcusbea.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "550561692793-ujid79tcrp7tl0e5i7u0c1fd4lgup86i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ramosaApps"
+              }
             }
           ]
         }
